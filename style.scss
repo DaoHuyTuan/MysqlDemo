@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    font-family: roboto;
+}
+body {
+    background-color:#dddddd;
+}
+.main {
+    width:100%;
+    height:100%;
+    .form {
+        width:600px;
+        height:400px;
+        margin-right:auto;
+        margin-left:auto;
+        margin-top:10%;
+        padding:20px;
+        background-color:#ffffff;
+        box-shadow: 0px 0px 20px #b1aeae;
+        position: relative;
+        & .boxUsername,.boxDate {
+            height:100px;
+            display: grid;
+            grid-row: 1fr 1fr;
+            margin-bottom: 20px;
+            & #txtName,#datePicker{
+                font-size: 16px;
+                padding-left: 10px;
+            }
+            & .label--txtName,.label--datePicker { 
+                font-size: 18px;
+            }
+        }
+        & #btn-get {
+            width:560px;
+            height:50px;
+            display: block;
+            position: absolute;
+            bottom:20px;
+            font-size: 18px;
+            background-color:#f44242;
+            color:#ffffff;
+            border:none;
+            box-shadow: 0px 0px 20px #b1aeae;
+            outline: none;
+            cursor: pointer;
+            transition: 1s;
+            border-radius: 5px;
+            &:active {
+                transform:scale(0.8);
+                
+            }
+        }
+
+        
+    }
+}
