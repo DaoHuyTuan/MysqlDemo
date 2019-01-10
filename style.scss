@@ -5,19 +5,20 @@
 body {
     background-color:#dddddd;
 }
+
 .main {
     width:100%;
     height:100%;
-    .form {
+    & .form ,.detail {   
         width:600px;
         height:400px;
-        margin-right:auto;
-        margin-left:auto;
+        left:50%;
+        transform:translateX(-50%);
         margin-top:10%;
         padding:20px;
         background-color:#ffffff;
         box-shadow: 0px 0px 20px #b1aeae;
-        position: relative;
+        position: absolute;
         & .boxUsername,.boxDate {
             height:100px;
             display: grid;
@@ -53,5 +54,28 @@ body {
         }
 
         
+    }
+    & .form {
+        display: block;
+    }
+    & #detail {
+        display: none;
+        & #dP_txtUserID,#dP_txtUsername {
+            font-size:16px;
+            display: block;
+        }
+        & .detail__labelID,.dP__labelUsername {
+            display: block;
+            margin-bottom:10px;
+            font-size:20px
+        }
+        & #dP_txtUserID {
+            margin-bottom: 10px;
+        }
+    }
+    & td {
+        padding: 10px;
+        border-spacing: 10px;
+        border-collapse: separate;
     }
 }

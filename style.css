@@ -11,31 +11,31 @@ body {
   width: 100%;
   height: 100%;
 }
-.main .form {
+.main .form, .main .detail {
   width: 600px;
   height: 400px;
-  margin-right: auto;
-  margin-left: auto;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 10%;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 0px 20px #b1aeae;
-  position: relative;
+  position: absolute;
 }
-.main .form .boxUsername, .main .form .boxDate {
+.main .form .boxUsername, .main .form .boxDate, .main .detail .boxUsername, .main .detail .boxDate {
   height: 100px;
   display: grid;
   grid-row: 1fr 1fr;
   margin-bottom: 20px;
 }
-.main .form .boxUsername #txtName, .main .form .boxUsername #datePicker, .main .form .boxDate #txtName, .main .form .boxDate #datePicker {
+.main .form .boxUsername #txtName, .main .form .boxUsername #datePicker, .main .form .boxDate #txtName, .main .form .boxDate #datePicker, .main .detail .boxUsername #txtName, .main .detail .boxUsername #datePicker, .main .detail .boxDate #txtName, .main .detail .boxDate #datePicker {
   font-size: 16px;
   padding-left: 10px;
 }
-.main .form .boxUsername .label--txtName, .main .form .boxUsername .label--datePicker, .main .form .boxDate .label--txtName, .main .form .boxDate .label--datePicker {
+.main .form .boxUsername .label--txtName, .main .form .boxUsername .label--datePicker, .main .form .boxDate .label--txtName, .main .form .boxDate .label--datePicker, .main .detail .boxUsername .label--txtName, .main .detail .boxUsername .label--datePicker, .main .detail .boxDate .label--txtName, .main .detail .boxDate .label--datePicker {
   font-size: 18px;
 }
-.main .form #btn-get {
+.main .form #btn-get, .main .detail #btn-get {
   width: 560px;
   height: 50px;
   display: block;
@@ -51,8 +51,31 @@ body {
   transition: 1s;
   border-radius: 5px;
 }
-.main .form #btn-get:active {
+.main .form #btn-get:active, .main .detail #btn-get:active {
   transform: scale(0.8);
+}
+.main .form {
+  display: block;
+}
+.main #detail {
+  display: none;
+}
+.main #detail #dP_txtUserID, .main #detail #dP_txtUsername {
+  font-size: 16px;
+  display: block;
+}
+.main #detail .detail__labelID, .main #detail .dP__labelUsername {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.main #detail #dP_txtUserID {
+  margin-bottom: 10px;
+}
+.main td {
+  padding: 10px;
+  border-spacing: 10px;
+  border-collapse: separate;
 }
 
 /*# sourceMappingURL=style.css.map */
