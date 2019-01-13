@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 10, 2019 at 06:49 PM
+-- Generation Time: Jan 13, 2019 at 05:12 PM
 -- Server version: 5.7.24-log
 -- PHP Version: 7.2.10
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `agenda` (
-  `userID` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
   `dayID` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `workingHoursDay` int(64) NOT NULL,
   `researchHoursDay` int(64) NOT NULL,
@@ -40,12 +40,15 @@ CREATE TABLE `agenda` (
 -- Dumping data for table `agenda`
 --
 
-INSERT INTO `agenda` (`userID`, `dayID`, `workingHoursDay`, `researchHoursDay`, `ca`) VALUES
-('user01', 'date01', 3, 5, 0),
-('user02', 'date02', 5, 3, 1),
-('user01', 'date02', 3, 5, 1),
-('user02', 'date01', 2, 6, 0),
-('user01', 'date04', 8, 0, 0);
+INSERT INTO `agenda` (`name`, `dayID`, `workingHoursDay`, `researchHoursDay`, `ca`) VALUES
+('tuan', 'date01', 3, 5, 0),
+('tuan', 'date02', 1, 7, 1),
+('badman', 'date01', 4, 4, 1),
+('badman', 'date02', 4, 4, 0),
+('zyye', 'date01', 0, 8, 1),
+('zyye', 'date03', 2, 7, 0),
+('miracle', 'date04', 3, 5, 1),
+('attacker', 'date04', 6, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +88,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`userID`, `name`) VALUES
 ('user01', 'tuan'),
-('user02', 'badman');
+('user02', 'badman'),
+('user03', 'miracle'),
+('user04', 'zyye');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
