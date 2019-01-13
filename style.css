@@ -76,6 +76,12 @@ body {
   padding: 10px;
   border-spacing: 10px;
   border-collapse: separate;
+  text-align: center;
+  border: 1px solid #000000;
+}
+.main table {
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

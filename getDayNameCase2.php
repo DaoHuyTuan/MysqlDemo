@@ -1,7 +1,8 @@
 <?php
-$dates = $_REQUEST['dateID'];
+$dayID = $_REQUEST['dayID'];
 
-$sql = "SELECT `dayName` FROM `dates` WHERE `dateID`= '$dates'";
+
+$sql = "SELECT `dayName` FROM dates WHERE `dateID` = '$dayID'";
 header("Access-Control-Allow-Origin: *");
 $conn = mysqli_connect("localhost","root","root","test");
 $result = mysqli_query($conn,$sql);

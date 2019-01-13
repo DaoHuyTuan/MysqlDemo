@@ -1,7 +1,8 @@
 <?php
-$dates = $_REQUEST['dateID'];
+$dateIDs = $_REQUEST['dateIDs'];
+$name = $_REQUEST['name'];
 
-$sql = "SELECT `dayName` FROM `dates` WHERE `dateID`= '$dates'";
+$sql = "SELECT * FROM agenda WHERE `dayID` = '$dateIDs' AND `name` = '$name'";
 header("Access-Control-Allow-Origin: *");
 $conn = mysqli_connect("localhost","root","root","test");
 $result = mysqli_query($conn,$sql);

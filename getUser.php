@@ -1,7 +1,7 @@
 <?php
 $users = $_REQUEST['users'];
 
-$sql = "SELECT `name` FROM `user` WHERE `userID`= '$users'";
+$sql = "SELECT `userID` FROM `user` WHERE `name`= '$users'";
 header("Access-Control-Allow-Origin: *");
 $conn = mysqli_connect("localhost","root","root","test");
 $result = mysqli_query($conn,$sql);

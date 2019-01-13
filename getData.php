@@ -1,7 +1,7 @@
 <?php
 $name = $_REQUEST['name'];
 
-$sql = "SELECT * FROM agenda WHERE `userID` = '$name'";
+$sql = "SELECT * FROM agenda WHERE `name` = '$name'";
 header("Access-Control-Allow-Origin: *");
 $conn = mysqli_connect("localhost","root","root","test");
 $result = mysqli_query($conn,$sql);
